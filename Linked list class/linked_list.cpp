@@ -44,20 +44,20 @@ template<typename userClass>
 void BlinkedList<userClass> ::pushBack(const userClass & userObj)
 {
 	node<userClass> *temp = new node<userClass>(userObj);         //Create a new node of the user object
-	temp->nextNode = 0; 											                    //temp is a pointer to the new element which is to be last
+	temp->nextNode = 0; 					      //temp is a pointer to the new element which is to be last
 
 	if (start == 0)                                               //empty ll
 	{
 		start = temp;
 		end = temp;
 	}
-	else if (start == end) {                                      //one element ll
+	else if (start == end) {                                       //one element ll
 		start->nextNode = temp;
 		end = temp;
 	}
 
 	else {
-		end->nextNode = temp;										                    //set the nextNode pinter to null for the new added node
+		end->nextNode = temp;					    //set the nextNode pinter to null for the new added node
 		end = temp;                                                 //The last end node is now set to point at the new created node
 	}
 };
@@ -103,7 +103,7 @@ node<userClass> * BlinkedList<userClass> ::findNode(const userClass &userObj)
     return i;
 	for (; i != end; i = i->nextNode)
 		if (i->nextNode->data == userObj)
-			return i;                                                     //returns a node pointer representing an element before
+			return i;                                         //returns a node pointer representing an element before
 	return 0;                                                         //returns NULL in case object doesn't exist
 };
 //---------------------------------------------
