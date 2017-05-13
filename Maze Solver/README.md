@@ -37,3 +37,22 @@ A maze with **22,000** white nodes
 The software solved this with only creating **8,000** nodes and in a time less than **0.02** second
 
 ![](assets/markdown-img-paste-2017050713405236.png)
+
+
+## How to use
+
+First thing you must create a text file representation of the maze, in case you have an image you can use the python script `image2text.py` to convert a PNG maze representation into a text file.
+
+ `python image2text.py maze1`
+
+ where maze1 is the png maze file name
+
+ Once the maze image is converted, a text file `i2t.txt` will be generated, then the maze executable should be called and be given this text file name as an argument
+
+ `./a.out i2t.txt`
+
+ The code will attemp to solve this maze and the answer will be generated in a text file called `ans.txt`. In order to view the result, another script is called to show the image after solving the maze
+
+ `python v.py i2t.txt`
+
+ 
