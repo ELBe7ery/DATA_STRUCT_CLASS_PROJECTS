@@ -40,19 +40,20 @@ The software solved this with only creating **8,000** nodes and in a time less t
 
 
 ## How to use
++ You need visual c++ compiler
++ Make sure to include the path of the vc++ compiler in the environmental variables
++ You need Python with PIL installed library [Python 2.7]
 
-First thing you must create a text file representation of the maze, in case you have an image you can use the python script `image2text.py` to convert a PNG maze representation into a text file.
+Use `compile.bat` to obtain the executable
 
- `python image2text.py maze1`
+And then in order to solve any of the given mazes, the python script `image2text.py` needs to be called
 
- where maze1 is the png maze file name
+`python image2text.py`
 
- Once the maze image is converted, a text file `i2t.txt` will be generated, then the maze executable should be called and be given this text file name as an argument
+Once the script translates the image into a proper text file you can call
 
- `./a.out i2t.txt`
+ `solve.bat`
 
- The code will attemp to solve this maze and the answer will be generated in a text file called `ans.txt`. In order to view the result, another script is called to show the image after solving the maze
+ An example solving the 350x400 maze
 
- `python v.py i2t.txt`
-
- 
+ ![](assets/how2use.gif)
